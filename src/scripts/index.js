@@ -5,7 +5,7 @@ import _assign from 'lodash/assign';
 import _compose from 'lodash/fp/compose';
 import _curry from 'lodash/fp/curry';
 
-import {tick as tickAction, setSize, testAction} from './actions';
+import {tick as tickAction, setSize as setSizeAction, testAction} from './actions';
 import {defaultState} from './state';
 import render from './render';
 import transform from './transform';
@@ -36,7 +36,7 @@ domready(() => {
 
   const initialViewPort = utils.viewPort();
 
-  state = setSize(initialViewPort, state);
+  state = setSizeAction(initialViewPort, state);
   utils.setDim($c, initialViewPort);
   tick();
 
@@ -49,6 +49,11 @@ domready(() => {
 });
 
 bean.on(window, 'resize', function(){
-  config.canvas = viewPort();
-  utils.setDim(window.$c, config.canvas);
+  const viewPortSize = utils.viewPort();
+
+  // update state with new size
+  state = setSizeAction(viewPortSize, state);
+
+  // and update the canvas
+  utils.setDim(window.$c, viewPortSize);
 });

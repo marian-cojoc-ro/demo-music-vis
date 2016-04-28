@@ -12,7 +12,7 @@ const viewPort = () => {
 const setDim = ($c, dim) => {
   _assign($c.style, dim);
   _assign($c, dim);
-  console.log(dim);
+  console.log('set new size to the canvas');
 };
 
 export default {
