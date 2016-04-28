@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Demo: Music Visualization</title>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta http-equiv="cleartype" content="on">
+</head>
+<body style="margin:0; overflow: hidden">
+
+<style>
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  #cp {
+    position: absolute;
+    border: 1px solid blue;
+    z-index: 2;
+    top: 0; left: 0;
+    background-color: hsla(0, 100%, 100%, 0.7);
+    padding: 20px;
+  }
+</style>
+<div id="app"></div>
+<canvas id="c" style=""></canvas>
+<div id="cp">
+  width: <input type="range" value="100" min="0" max="800" />
+</div>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+{
+  'rules': {
+    'color-hex-case': 'lower',
+    'color-hex-length': 'short',
+    'color-no-invalid-hex',
+
+    'font-weight-notation': 'named',
+
+    'function-calc-no-unspaced-operator',
+    'function-url-quotes': 'single',
+
+    'number-max-precision': 3,
+    'number-no-trailing-zeros',
+    'number-zero-length-no-unit',
+
+
+    'declaration-no-important',
+
+    'indentation': 2,
+    'max-empty-lines': 3,
+    'no-duplicate-selectors',
+    'no-eol-whitespace',
+    'no-missing-eof-newline',
+    'no-unknown-animations',
+
+    'rule-properties-order': [
+      {
+        'order': 'flexible',
+        'emptyLineBefore': true,
+        'properties': ['position', 'top', 'right', 'bottom', 'left', 'z-index'],
+      },
+      {
+        'order': 'flexible',
+        'emptyLineBefore': true,
+        'properties': ['display', 'width', 'max-width', 'min-width', 'height', 'min-height', 'max-height', 'margin', 'padding'],
+      },
+      {
+        'order': 'flexible',
+        'emptyLineBefore': true,
+        'properties': ['visibility', 'opacity', 'overflow', 'background', 'border', 'box-shadow'],
+      },
+      {
+        'order': 'flexible',
+        'emptyLineBefore': true,
+        'properties': ['font-family', 'font-size', 'font-weight', 'font-style', 'line-height', 'text-align', 'color'],
+      },
+      {
+        'order': 'flexible',
+        'emptyLineBefore': true,
+        'properties': ['cursor', 'transition', 'transform', 'animation'],
+      },
+    ],
+  },
+}
